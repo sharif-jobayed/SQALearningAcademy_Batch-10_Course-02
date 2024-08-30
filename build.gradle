@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+}
+
+group = 'SQALearningAcademy_Batch-10_Course-02'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {}
+
+test {}
