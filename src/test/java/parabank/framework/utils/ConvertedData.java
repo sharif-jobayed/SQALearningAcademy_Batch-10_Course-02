@@ -12,7 +12,12 @@ public class ConvertedData {
     }
 
     public static class AppData {
+        private String Browser;
         private String BaseURL;
+
+        public String getBrowser() {
+            return Browser;
+        }
 
         public String getBaseURL() {
             return BaseURL;
@@ -45,6 +50,7 @@ public class ConvertedData {
             public String getUsername() {
                 return Username;
             }
+
             public String getPassword() {
                 return Password;
             }
