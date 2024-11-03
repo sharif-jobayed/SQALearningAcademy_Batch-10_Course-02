@@ -22,7 +22,7 @@ public class BaseTest {
 
     protected BaseTest() {
         this.dataConverter = new DataConverter();
-        this.driver = getDriver("firefox");
+        this.driver = getDriver(this.dataConverter.getAppData().getBrowser());
     }
 
     protected WebDriver getDriver(String driverTitle) {
@@ -37,7 +37,6 @@ public class BaseTest {
             default -> throw new InvalidArgumentException("Invalid driver request");
         };
     }
-
 
     @BeforeClass
     protected void setUp() {
