@@ -57,6 +57,7 @@ target/
 *.lck
 *.bin
 *.properties
+gradle.properties
 
 # Others
 *.swp
