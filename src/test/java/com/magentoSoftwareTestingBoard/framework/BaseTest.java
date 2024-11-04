@@ -22,12 +22,14 @@ import java.util.Locale;
 public class BaseTest {
     private DataConverter dataConverter;
     private WebDriver driver;
-    protected Page page;
 
     protected BaseTest() {
         this.dataConverter = new DataConverter();
         this.driver = getDriver(this.dataConverter.getAppData().getBrowser());
-        this.page = new BasePage(this.driver);
+    }
+
+    protected BasePage getPage() {
+        return new BasePage(driver);
     }
 
     private WebDriver getDriver(String driverTitle) {
@@ -47,7 +49,7 @@ public class BaseTest {
     protected void setUp() {
         this.driver.manage().window().setSize(new Dimension(1440, 900));
         this.driver.get(this.dataConverter.getAppData().getBaseURL());
-        HomePage homePage = page.getInstance(HomePage.class);
+        HomePage homePage = this.getPage().getInstance(HomePage.class);
         Assert.assertTrue(homePage.getFeaturedImage().isDisplayed(), "Not on the Homepage.");
     }
 
