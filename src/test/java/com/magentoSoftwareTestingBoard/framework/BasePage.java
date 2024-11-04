@@ -53,7 +53,7 @@ public class BasePage extends Page {
     }
 
     @Override
-    public void doClick(By locator) {
+    public void clickOn(By locator) {
         try {
             getElement(locator).click();
         } catch (Exception e) {

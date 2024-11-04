@@ -29,7 +29,7 @@ public abstract class Page {
 
     public abstract void waitTillVisible(By locator);
 
-    public abstract void doClick(By locator);
+    public abstract void clickOn(By locator);
 
     public abstract String getItsText(By locator);
 
